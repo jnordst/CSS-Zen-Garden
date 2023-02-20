@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
+
+/* Pallete 
+#f5f6fa; white (text)
+#2f3640; dark grey
+#495055 grey (text)
+#5c94fc blue (background)
+#e65a0f orange (header)
+#ffdeb5 light orange (header text)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+	background-color: #5c94fc;
+}
+
+.page-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/* PERSONAL ----------------------------------------------- */
+.flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sect {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+/* HEADER ------------------------------------------------- */
+header {
+	background-color: #e65a0f;
+	color: #ffdeb5;
+	height: 200px;
+	width: 35vw;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 2px solid #ffdeb5;
+	border-right: 2px solid #222;
+	border-bottom: 2px solid #222;
+	border-radius: 3px;
+	text-align: center;
+	min-width: 320px;
+}
+
+header h1 {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 3rem;
+	text-shadow: #222 3px 5px;
+}
+
+header h2 {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 1rem;
+	margin-top: 1rem;
+	text-shadow: #222 3px 2px;
+}
+
+/* IMAGES ------------------------------------------------- */
+.images img:nth-of-type(1) {
+	position: absolute;
+	right: 45px;
+	top: 60px;
+	z-index: 3;
+	animation: clouds 3s ease-in forwards infinite alternate;
+}
+
+.images img:nth-of-type(2) {
+	position: absolute;
+	left: 45px;
+	top: 485px;
+	z-index: 3;
+	animation: clouds 3s ease-in forwards infinite alternate;
+}
+
+.images img:nth-of-type(3) {
+	position: absolute;
+	right: 15px;
+	top: 1200px;
+	z-index: 3;
+	animation: clouds 3s ease-in forwards infinite alternate;
+}
+
+.images img:nth-of-type(4) {
+	position: absolute;
+	left: 5px;
+	top: 1700px;
+	z-index: 3;
+	animation: clouds 3s ease-in forwards infinite alternate;
+}
+
+.images img:nth-of-type(5) {
+	position: fixed;
+	left: 5vw;
+	top: 620px;
+	z-index: 2;
+	animation: mario 1s;
+}
+
+#brick {
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+/* SUMMARY ------------------------------------------------ */
+.summary {
+	text-align: center;
+}
+
+.summary p {
+	font-size: 0.8rem;
+}
+
+/* FOOTER ------------------------------------------------- */
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 40px;
+}
+
+/* ASIDE -------------------------------------------------- */
+aside {
+	margin-bottom: 20px;
+}
+
+.design-selection nav ul {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 20px;
+	list-style: none;
+	gap: 20px;
+}
+
+.design-selection nav ul li {
+	width: 100% / 8;
+}
+
+.design-selection nav ul li a:first-of-type {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+
+.arch-resources {
+	display: flex;
+}
+
+.design-archives,
+.design-resources {
+	width: 50%;
+	height: 100%;
+}
+
+.design-archives nav ul {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	list-style: none;
+}
+
+.zen-resources ul {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	align-items: center;
+}
+
+.sidebar .wrapper {
+	margin-bottom: 60px;
+}
+
+/* IMAGES ------------------------------------------------- */
+.footer-brick {
+	width: 99vw;
+	background-image: url(./images/footerbrick.png);
+	background-repeat: repeat-x;
+	height: 130px;
+	position:absolute;
+	left: 0;
+}
+
+.footer-brick img:nth-of-type(1) {
+	position: absolute;
+	bottom: 128px;
+	right: 0px;
+}
+
+.footer-brick img:nth-of-type(2) {
+	position: absolute;
+	bottom: 128px;
+	left: 5vw;
+	z-index: 1;
+}
+
+.footer-brick img:nth-of-type(3) {
+	position: absolute;
+	bottom: 128px;
+	left: 60vw;
+	z-index: 2;
+	animation: goomba 5s ease-in-out forwards infinite alternate;
+}
+
+/* ANIMATION ---------------------------------------------- */
+@keyframes clouds {
+	100% {
+		transform: translateX(-20%);
+	}
+}
+
+@keyframes goomba {
+	100% {
+		transform: translateX(-30vw);
+	}
+}
+
+@keyframes mario {
+	0% {
+		transform: translateY(-100%);
+	}
+	
+	100% {
+		transform: translateY(0%);
+	}
+}
