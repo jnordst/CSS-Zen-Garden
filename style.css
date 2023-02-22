@@ -28,6 +28,7 @@ html {
 }
 
 /* PERSONAL ----------------------------------------------- */
+/* Setting a couple class presets to avoid redundant code duplication */
 .flex {
 	display: flex;
 	flex-direction: column;
@@ -44,6 +45,7 @@ html {
 }
 
 /* HEADER ------------------------------------------------- */
+/* Header is designed to look like the NES Mario title. */
 header {
 	background-color: #e65a0f;
 	color: #ffdeb5;
@@ -60,13 +62,13 @@ header {
 	min-width: 320px;
 }
 
-header h1 {
+header > h1 {
 	font-family: 'Press Start 2P', sans-serif;
 	font-size: 3rem;
 	text-shadow: #222 3px 5px;
 }
 
-header h2 {
+header > h2 {
 	font-family: 'Press Start 2P', sans-serif;
 	font-size: 1rem;
 	margin-top: 1rem;
@@ -74,6 +76,7 @@ header h2 {
 }
 
 /* IMAGES ------------------------------------------------- */
+/* Cloud */
 .images img:nth-of-type(1) {
 	position: absolute;
 	right: 45px;
@@ -82,6 +85,7 @@ header h2 {
 	animation: clouds 3s ease-in forwards infinite alternate;
 }
 
+/* Cloud */
 .images img:nth-of-type(2) {
 	position: absolute;
 	left: 45px;
@@ -90,6 +94,7 @@ header h2 {
 	animation: clouds 3s ease-in forwards infinite alternate;
 }
 
+/* Cloud */
 .images img:nth-of-type(3) {
 	position: absolute;
 	right: 15px;
@@ -98,6 +103,7 @@ header h2 {
 	animation: clouds 3s ease-in forwards infinite alternate;
 }
 
+/* Cloud */
 .images img:nth-of-type(4) {
 	position: absolute;
 	left: 5px;
@@ -106,6 +112,7 @@ header h2 {
 	animation: clouds 3s ease-in forwards infinite alternate;
 }
 
+/* Mario */
 .images img:nth-of-type(5) {
 	position: fixed;
 	left: 5vw;
@@ -114,6 +121,7 @@ header h2 {
 	animation: mario 1s;
 }
 
+/* Bricks */
 #brick {
 	margin: 0 auto;
 	margin-top: 100px;
@@ -121,11 +129,8 @@ header h2 {
 }
 
 /* SUMMARY ------------------------------------------------ */
-.summary {
-	text-align: center;
-}
-
 .summary p {
+	text-align: center;
 	font-size: 0.8rem;
 }
 
@@ -139,6 +144,7 @@ footer {
 }
 
 /* ASIDE -------------------------------------------------- */
+/* Styled the design selection, archives and resources to be rows rather than columns */
 aside {
 	margin-bottom: 20px;
 }
@@ -160,7 +166,6 @@ aside {
 	font-size: 1.3rem;
 	font-weight: bold;
 }
-
 
 .arch-resources {
 	display: flex;
@@ -191,6 +196,7 @@ aside {
 }
 
 /* IMAGES ------------------------------------------------- */
+/* Bottom Tilemap */
 .footer-brick {
 	width: 99vw;
 	background-image: url(./images/footerbrick.png);
@@ -200,12 +206,14 @@ aside {
 	left: 0;
 }
 
+/* Castle */
 .footer-brick img:nth-of-type(1) {
 	position: absolute;
 	bottom: 128px;
 	right: 0px;
 }
 
+/* Flag */
 .footer-brick img:nth-of-type(2) {
 	position: absolute;
 	bottom: 128px;
@@ -213,6 +221,7 @@ aside {
 	z-index: 1;
 }
 
+/* Gomba */
 .footer-brick img:nth-of-type(3) {
 	position: absolute;
 	bottom: 128px;
@@ -222,18 +231,21 @@ aside {
 }
 
 /* ANIMATION ---------------------------------------------- */
+/* Moves the image forward 20% of the div, then back, repeats infinitely */
 @keyframes clouds {
 	100% {
 		transform: translateX(-20%);
 	}
 }
 
+/* Similar to the clouds, moves back and forward infitely. Using vw for better results */
 @keyframes goomba {
 	100% {
 		transform: translateX(-30vw);
 	}
 }
 
+/* When the page loads Mario falls down the pole into view to surprise the viewer */
 @keyframes mario {
 	0% {
 		transform: translateY(-100%);
